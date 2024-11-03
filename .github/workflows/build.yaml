@@ -15,5 +15,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: npm ci -y --prefer-offline
+      - run: pnpm i --frozen-lockfile
       - run: pnpm run build
