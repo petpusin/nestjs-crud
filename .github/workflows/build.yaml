@@ -1,4 +1,4 @@
-name: NestJS Build with pnpm
+name: NestJS Build
 
 on:
   push:
@@ -15,5 +15,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: pnpm i --frozen-lockfile
-      - run: pnpm run build
+      - run: npm ci
+      - run: npm run build
