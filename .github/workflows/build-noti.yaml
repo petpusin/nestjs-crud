@@ -1,4 +1,4 @@
-name: NestJS Build
+name: NestJS Build and Notification
 
 on:
   push:
@@ -7,10 +7,9 @@ on:
     branches: [main]
 
 jobs:
-
-  call-workflow-build-image:
+  call-workflow-build-push:
     uses: petpusin/github-reuse-workflows/build-push.yaml@main
 
-  call-notification-discord:
-    needs: [call-workflow-build-image]
-    uses: petpusin/github-reuse-workflows/build-push.yaml@main
+  call-workflow-discord-noti:
+    needs: [call-workflow-build-push]
+    uses: petpusin/github-reuse-workflows/discord-noti.yaml@main
