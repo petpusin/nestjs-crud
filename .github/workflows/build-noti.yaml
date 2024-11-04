@@ -13,5 +13,5 @@ jobs:
   call-workflow-discord-noti:
     needs: [call-workflow-build-push]
     secrets:
-      SOME_SECRET: ${{ secrets.WEBHOOK_URL }}
+      WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
     uses: petpusin/github-reuse-workflows/.github/workflows/discord-noti.yaml@main
