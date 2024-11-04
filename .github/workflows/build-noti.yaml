@@ -9,10 +9,9 @@ on:
 jobs:
   call-workflow-build-push:
     uses: petpusin/github-reuse-workflows/.github/workflows/build-push.yaml@main
-  
   call-workflow-discord-noti:
     needs: [call-workflow-build-push]
     secrets:
       WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-      
+
     uses: petpusin/github-reuse-workflows/.github/workflows/discord-noti.yaml@main
