@@ -7,8 +7,8 @@ on:
     branches: [main]
 
 jobs:
-  call-workflow-build-push:
-    uses: petpusin/github-reuse-workflows/.github/workflows/build-push.yaml@main
+  # call-workflow-build-push:
+  #   uses: petpusin/github-reuse-workflows/.github/workflows/build-push.yaml@main
   call-workflow-bearer:
     uses: ./bearer.yaml
   # call-workflow-discord-noti:
